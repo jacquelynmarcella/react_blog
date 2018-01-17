@@ -1,39 +1,29 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Comment from './Comments.js'
 import Author from './Author.js';
-
-let postContent = {
-  title: "My first post",
-  author: "Jacquelyn",
-  body: "Learning to post in React",
-  comments: [
-    "First",
-    "Yay",
-    "Interesting"
-    ]
-}
-
-let allAuthors = [
-  "Mr Iguana",
-  "T-Rex",
-  "Cool Guy"
-]
 
 class Post extends Component {
   render() {
+      const allPosts = this.props.posts.map( post => {
+        return (
+          <div class="post">
+            <h1 className="Title">{post.title}</h1>
+            <Author author={post.author} />
+            <p className="Post-intro">
+              {post.content}
+            </p>
+            <Comment comments={post.comments} />
+          </div>
+        );
+      })
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">{postContent.title}</h1>
-          <h3>by {postContent.author}</h3>
+          <h1>Blog</h1>
         </header>
-        <p className="App-intro">
-          {postContent.body}
-        </p>
-        {allAuthors.map( allAuthors => <Author body={allAuthors} /> )}
-        <h4>Comments</h4>
-        {postContent.comments.map( comments => <blockquote>{comments}</blockquote> )}
+        {allPosts}
       </div>
     );
   }
