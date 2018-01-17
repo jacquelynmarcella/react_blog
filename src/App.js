@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Author from './Author.js';
 
 let postContent = {
   title: "My first post",
@@ -13,6 +14,12 @@ let postContent = {
     ]
 }
 
+let allAuthors = [
+  "Mr Iguana",
+  "T-Rex",
+  "Cool Guy"
+]
+
 class Post extends Component {
   render() {
     return (
@@ -24,6 +31,7 @@ class Post extends Component {
         <p className="App-intro">
           {postContent.body}
         </p>
+        {allAuthors.map( allAuthors => <Author body={allAuthors} /> )}
         <h4>Comments</h4>
         {postContent.comments.map( comments => <blockquote>{comments}</blockquote> )}
       </div>
