@@ -34,7 +34,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/blog" component={
             () => (<Blog posts={this.props.posts} /> 
-              )} />
+          )} />
           <Route exact path="/about" component={About} />
           <Route exact path="/food" component={Food} />
           <Route exact path="/movie" component={Movie} />

@@ -44,9 +44,9 @@ nav a:hover {
 }
 
 .hero {
-  background: url('https://media.giphy.com/media/XLsDo3hdxWpdm/giphy.gif');
+  background: url('/hero.gif');
   background-size: cover;
-  background-position: 0 25%;
+  background-position: 0 15%;
   margin: -45px auto 0 auto;
 }
 
@@ -59,9 +59,16 @@ h4 {
 }
 
 .hero h1 {
-  padding: 250px 0;
+  padding-top: 300px;
   font-size: 4em;
   font-weight: 800;
+}
+
+.hero h4 {
+  background: rgba(256,256,256,.75);
+  padding: 15px;
+  display: inline-block;
+  margin: 0 0 120px 0;
 }
 
 @keyframes App-logo-spin {
