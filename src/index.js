@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Post from './App';
-import Author from './Author';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 let posts = [{
@@ -26,5 +25,5 @@ let posts = [{
   	]
 }]
 
-ReactDOM.render(<Post posts={posts} />, document.getElementById('root'));
+ReactDOM.render(<App posts={posts} />, document.getElementById('root'));
 registerServiceWorker();

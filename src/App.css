@@ -27,6 +27,12 @@
   padding: 25px 50px;
 }
 
+.comments {
+  border: 1px solid grey;
+  width: 50%;
+  padding: 25px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

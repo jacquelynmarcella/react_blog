@@ -1,32 +1,49 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Comment from './Comments.js'
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+//Importing components
+import Food from './Food.js';
+import Movie from './Movie.js';
+import Blog from './Blog.js';
+import About from './About.js';
+import Home from './Home.js';
+import Comment from './Comments.js';
 import Author from './Author.js';
 
-class Post extends Component {
+class App extends Component {
+
   render() {
-      const allPosts = this.props.posts.map( post => {
-        return (
-          <div class="post">
-            <h1 className="Title">{post.title}</h1>
-            <Author author={post.author} />
-            <p className="Post-intro">
-              {post.content}
-            </p>
-            <Comment comments={post.comments} />
-          </div>
-        );
-      })
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Blog</h1>
-        </header>
-        {allPosts}
+      <Router>
+        <div>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/about">About</Link>
+            <Link to="/movie">Movie</Link>
+            <Link to="/food">Food</Link>
+          </nav>
+          <Route exact path="/" component={Home} />
+          <Route path="/blog" component={
+            () => (<Blog posts={this.props.posts} /> 
+              )} />
+          <Route path="/about" component={About} />
+          <Route path="/food" component={Food} />
+          <Route path="/movie" component={Movie} />
+        </div>
+      </Router>
+   {/*     {allPosts}*/}
       </div>
     );
   }
 }
 
-export default Post;
+export default App;

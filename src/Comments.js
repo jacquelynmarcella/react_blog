@@ -8,7 +8,7 @@ class Comment extends Component {
 		return (
 			<div>
 			<h4>Comments</h4>
-			<p>{ allComments }</p>
+			<p className="comments">{ allComments }</p>
 			</div>
 		);
 	}
