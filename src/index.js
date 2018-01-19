@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 let posts = [{
 	title: "My first post",
-	author: "Mr Iguana", 
+	author: "Doggo", 
 	content: "Learning to post in React",
 	comments: [
 		"First",
@@ -16,7 +16,7 @@ let posts = [{
   },
   {
 	title: "My second post",
-	author: "Cool Guy", 
+	author: "Doggo", 
 	content: "Learning to post in React, still",
 	comments: [
     	"First!!",

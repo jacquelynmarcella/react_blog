@@ -5,8 +5,8 @@ import Author from './Author.js';
 
 class Blog extends Component {
   render() {
-  	      const allPosts = this.props.posts.map( post => {
-        return (
+  	const allPosts = this.props.posts.map( post => {
+		return (
           <div class="post">
             <h1 className="Title">{post.title}</h1>
             <Author author={post.author} />

@@ -5,7 +5,8 @@ class Movie extends Component {
   render() {
     return (
       <div>
-        <p>Movie</p>
+        <h1>Favorite Movie</h1>
+        <h3>Air Bud</h3>
       </div>
     );
   }

@@ -32,12 +32,12 @@ class App extends Component {
             <Link to="/food">Food</Link>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route path="/blog" component={
+          <Route exact path="/blog" component={
             () => (<Blog posts={this.props.posts} /> 
               )} />
-          <Route path="/about" component={About} />
-          <Route path="/food" component={Food} />
-          <Route path="/movie" component={Movie} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/food" component={Food} />
+          <Route exact path="/movie" component={Movie} />
         </div>
       </Router>
    {/*     {allPosts}*/}

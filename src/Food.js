@@ -5,7 +5,8 @@ class Food extends Component {
   render() {
     return (
       <div>
-      	<p>Food</p>
+      	<h1>Favorite Food</h1>
+      	<h3>Spaghetti</h3>
       </div>
     );
   }

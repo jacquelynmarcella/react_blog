@@ -5,7 +5,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p>Home</p>
+        <header className="hero">
+        	<h1>DOG DOES A BLOG</h1>
+        </header>
       </div>
     );
   }
